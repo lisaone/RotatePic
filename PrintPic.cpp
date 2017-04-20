@@ -21,9 +21,9 @@ PrintPic::~PrintPic()
 void PrintPic::printMatrix(std::vector<std::vector<int>> PicMatrix)
 {
 	cout << "Printing..." << endl;
-	for (int i = 0; i < PicMatrix.size(); i++)
+	for (unsigned int i = 0; i < PicMatrix.size(); i++)
 	{
-		for (int j = 0; j < PicMatrix[i].size(); j++)
+		for (unsigned int j = 0; j < PicMatrix[i].size(); j++)
 		{
 			cout << setw(3) << right << PicMatrix[i][j] << " ";
 		}

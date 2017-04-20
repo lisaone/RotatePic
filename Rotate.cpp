@@ -15,15 +15,21 @@ using namespace std;
 
 int main()
 {
-	int SideLength = 0;
-	cout << "Please Insert the Length of a Side: " << endl;
-	cin >> SideLength;
-	vector<vector<int>> PicMatrix(SideLength);
+	int Height = 0;
+	int Width = 0;
+	cout << "Please Insert the Length of Height: " << endl;
+	cin >> Height;
+	cout << "Please Insert the Length of Width : " << endl;
+	cin >> Width;
+	
 	InitialMatrix IM;
+	IM.setMatrix(Height, Width);
+
 	PrintPic PP;
-	PP.printMatrix(IM.setMatrix(PicMatrix));
-	RotateMatrix RM;
-	PP.printMatrix(RM.rotateMatrixRight(IM.setMatrix(PicMatrix)));
+	PP.printMatrix(IM.getMatrix());
+	IM.rotateMatrix();
+	PP.printMatrix(IM.getMatrix());
+
     return 0;
 }
 
